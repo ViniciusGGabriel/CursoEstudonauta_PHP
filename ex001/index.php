@@ -10,5 +10,9 @@
     <?php 
         phpinfo();
     ?>
+    <?php /* Super tag php */?>
+    <?/* Short open tag */?>
+    <%<!-- ASP tag -->%>
+    <?= /* Short tag php */?>
 </body>
 </html>
