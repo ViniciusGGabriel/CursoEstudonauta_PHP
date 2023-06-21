@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>exemplo de php</h1>
-    <?php 
+    <?php
         date_default_timezone_set("America/Sao_Paulo");
         /* Usar o código acima para estar em horas e dias BR */
          echo "Hoje é dia " . date("d/m/y ");
