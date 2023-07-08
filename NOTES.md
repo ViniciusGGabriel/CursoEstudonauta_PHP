@@ -28,3 +28,18 @@ Nem sempre o compilador ira mostrar os erros do meu código, mas me dará um res
 \\ barra invertida 
 \$ sinal de cifrão 
 \u{} codepoint          
+
+abs() é um valor absoluto em PHP ele retira o sinal do numero;
+
+base_convert() troca as bases decimal,hexadecimal e etc, não entendi como funciona;
+
+ceil() Arredonda pra cima , floor() para baixo, round() normal;
+
+hypot() acha a hipotenusa;
+
+intdiv() faz uma divisão inteira ele aproxima os números em uma divisão ; 
+
+min() e max() Mostra o numero máximo e mínimo entre valores;
+
+pi() mostra o valor de Pi = 3,14...;
+
