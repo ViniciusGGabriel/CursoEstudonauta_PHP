@@ -9,15 +9,23 @@
 </head>
 <body>
     <main>
-        <?php 
-         $real = $_REQUEST["valor"] ?? 0;
-         $cotação = 4.80;
+        <?php      
+        $inicio = date("m-d-Y", strtotime("-7 days"));
+        $fim = date("m-d-Y");
 
-         $dolar = $real/$cotação;
+        $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''.$inicio.'\'&@dataFinalCotacao=\''.$fim.'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
 
-         echo "Seu R\$" . number_format($real, 2) . " é de " . number_format($dolar, 2) . " em dólares";
-        ?>
-        <button><a href="index.html">Voltar</a></button>
+        $dados = json_decode(file_get_contents($url), true);
+        /* Se não for colocado true ele fica dentro de um object ao invés de um array */
+
+        /* var_dump($dados); */
+
+        $cotação = $dados["value"][0]["cotacaoCompra"];
+        $real = $_REQUEST["valor"] ?? 0;
+        $dolar = $real/$cotação;
+        echo "Seu R\$" . number_format($real, 2) . " é de " . number_format($dolar, 2) . " em dólares";
+    ?>
+    <button><a href="index.html">Voltar</a></button>
     </main>
 </body>
 </html>
