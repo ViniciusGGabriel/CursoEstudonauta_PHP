@@ -43,3 +43,6 @@ min() e max() Mostra o numero máximo e mínimo entre valores;
 
 pi() mostra o valor de Pi = 3,14...;
 
+A super global $_REQUEST ela puxa dados da $_POST e $_GET ela funciona para as duas
+
+Usar o método post nem sempre é seguro
