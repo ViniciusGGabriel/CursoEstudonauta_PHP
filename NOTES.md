@@ -46,3 +46,7 @@ pi() mostra o valor de Pi = 3,14...;
 A super global $_REQUEST ela puxa dados da $_POST e $_GET ela funciona para as duas
 
 Usar o método post nem sempre é seguro
+
+<?="Bom dia"?> isso também pode representar um echo em PHP
+
+<?php echo $_SERVER['PHP_SELF']?> esse código manda os dados para o próprio arquivo 
